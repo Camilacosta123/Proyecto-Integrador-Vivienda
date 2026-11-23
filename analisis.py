@@ -9,7 +9,11 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.api import VAR
 
 warnings.filterwarnings("ignore")
-RUTA = "data/base_integrador.xlsx"
+import os
+_AQUI = os.path.dirname(os.path.abspath(__file__))
+# Busca la base en data/ y, si no está, en la misma carpeta que este archivo (para repositorios con archivos sueltos)
+RUTA = next((p for p in (os.path.join(_AQUI, "data", "base_integrador.xlsx"), os.path.join(_AQUI, "base_integrador.xlsx"))
+             if os.path.exists(p)), "data/base_integrador.xlsx")
 HOJA = "Base_Analizada"
 LAGS = 3
 ORDEN_ESTADOS = ["Bajo", "Medio", "Alto"]
