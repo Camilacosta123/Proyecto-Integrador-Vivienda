@@ -3,8 +3,8 @@
 Proyecto integrador de *Análisis e Interpretación de Datos a través de Python* (tercer corte):
 series de tiempo y modelo VAR, cadenas de Markov y simulación de Monte Carlo, presentados en una app de Streamlit.
 
-**Autora:** [Nombre de la estudiante]
-**App publicada:** [pegar aquí el enlace de Streamlit Community Cloud]
+**Autora:** Maria Camila Acosta Puentes
+**App publicada:** 
 
 ## Pregunta central
 ¿Cómo se relacionan dinámicamente la tasa de política monetaria (TPM), la tasa de colocación y el área aprobada para
