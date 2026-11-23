@@ -7,7 +7,7 @@ from plotly.subplots import make_subplots
 
 import analisis as an
 
-AUTORA = Maria Camila Acosta Puentes
+AUTORA = "Maria Camila Acosta Puentes"
 st.set_page_config(page_title="Crédito, política monetaria y vivienda", page_icon="🏠", layout="wide")
 
 
