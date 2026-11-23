@@ -14,7 +14,11 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.api import VAR
 
 # ---------- CARGA DE DATOS (una sola vez) ----------
-ruta = "data/base_integrador.xlsx"   # ruta relativa: ejecutar desde la carpeta del repositorio
+import os
+_AQUI = os.path.dirname(os.path.abspath(__file__))
+# Busca la base en data/ y, si no está, suelta junto a este archivo (funciona con ambas estructuras del repositorio)
+ruta = next((p for p in (os.path.join(_AQUI, "data", "base_integrador.xlsx"), os.path.join(_AQUI, "base_integrador.xlsx"))
+             if os.path.exists(p)), "base_integrador.xlsx")
 datos = pd.read_excel(ruta, sheet_name="Base_Analizada")
 datos["fecha"] = pd.to_datetime(datos["fecha"])
 df = datos.set_index("fecha"); df.index = df.index.to_period("M")
